@@ -1,5 +1,12 @@
-[functions]
-  included_files = [
-  "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
-  "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
-]
+# [[redirects]]
+#   from = "/*"
+#   to = "https://digitalsitenotice.camden.gov.uk/:splat"
+#   status = 301
+#   force = true
+
+[build]
+  command = "mkdir .next && cp index.html .next && cp -rp assets .next"
+
+
+[build.environment]
+NETLIFY_NEXT_PLUGIN_SKIP = "true"

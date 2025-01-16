@@ -4,6 +4,15 @@
     </a>
 </p>
 
+## Setting up this maintenance mode branch
+
+- create a branch called e.g. maintenance with the content you wish to have live in it.
+- Update your Build & Deploy settings to also build this maintenance branch. You can add it to the list of allowed branches if you don’t already allow all branches to be built.
+- Next, successfully deploy this branch (it will be a Branch Deploy).
+- After previewing the content, use the button to publish this deploy.
+- When maintenance is done, navigate to the previous production deploy from your deploys listing and choose to publish it again with the button there. No need to change code - you just choose the old deploy to republish by selecting the deploy, and on its logs page, use the “publish deploy” button to roll back to this deploy.
+- Future deploys via your normal channel (whether that is Git commits, CLI, API, or drag and drop) will work as usual going forward.
+
 ## Introduction
 
 This project is a Digital Site Notice web application that helps people to discover live planning applications nearby and to provide meaningful feedback in a structured way. It aims to make it easier for people to engage with planning applications, widen engagement and bring out more constructive, balanced perspectives that can improve planning development.
