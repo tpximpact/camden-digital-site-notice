@@ -1,8 +1,8 @@
-# [[redirects]]
-#   from = "/*"
-#   to = "https://digitalsitenotice.camden.gov.uk/:splat"
-#   status = 301
-#   force = true
+[[redirects]]
+  from = "/*"
+  to = "https://digitalsitenotice.camden.gov.uk/:splat"
+  status = 301
+  force = true
 
 [build]
   command = "mkdir .next && cp index.html .next && cp -rp assets .next"
